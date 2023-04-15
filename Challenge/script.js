@@ -9,7 +9,7 @@ const logCalc = () => {
   const calculatedAsNumber = isString ? parseInt(calculated) : calculated;
   calculated = calculatedAsNumber + 1;
 
-  console.log(calculated)
+  
 };
 
 const calcUser = () => {
@@ -18,15 +18,15 @@ const calcUser = () => {
     user = 'John';    //removed  if (calculated > 2) & state = 'idle'
     state = 'requesting';
   }
-  if (calculated > 3) { //+  if (calculated > 3) 
+  if (calculated > 3) { // Added  [if (calculated > 3)] 
     state = 'idle';
     return;
   }
 };
 
-const checkUser = () => {
+const checkUser = () => {                            
   if (user && state === 'requesting') {
-    console.log(`User: ${user} (${calculated})`);
+    console.log(`User: ${user} (${calculated})`);   
   }
 };
 
